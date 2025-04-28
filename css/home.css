@@ -1,0 +1,271 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px; /* Aumentei o padding para 20px */
+    color: white;
+    height: 90px; /* Definindo uma altura fixa em pixels */
+    border-radius: 15px 15px 0 0;
+}
+.navbar h3{
+    color: coral;
+    font-size: 32px;
+}
+.navbar span{
+    color:slateblue;
+
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .nav-links li {
+    margin-right: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilos do botão na navbar */
+.navbar .login-container .login-btn {
+    padding: 15px 23px; /* Define o espaço interno do botão (espaço ao redor do texto) */
+    background-color: #ff6347; /* Define a cor de fundo do botão (tom de vermelho) */
+    color: white; /* Define a cor do texto do botão (branco) */
+    text-decoration: none; /* Remove qualquer decoração (como sublinhado) do texto */
+    border-radius: 15px; /* Define bordas arredondadas para o botão */
+    transition: background-color 0.3s; /* Aplica uma transição suave para a mudança da cor de fundo */
+    font-size: 18px;
+   
+}
+
+/* Efeito ao passar o mouse sobre o botão (hover) */
+.navbar .login-container .login-btn:hover {
+    transform: scale(1.3); /* Aplica o zoom (aumenta o tamanho do botão para 110%) */
+    transform: scale(1.2); /* Aumenta o tamanho do botão para 120% */
+    background-color: #ff4500; /* Muda a cor de fundo para um tom mais escuro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa e destacada */
+    color: #fff; /* Garante que a cor do texto seja branca */
+    font-size: 22px;
+}
+
+
+/* Banner com imagem de fundo */
+.banner {
+    position: relative;
+    background-image: url('http://localhost/Teste/imagens/img/educa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 950px; /* Define a altura da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo no topo da imagem */
+    color: white;
+    text-align: center;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0; /* Posiciona o conteúdo no topo da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o texto horizontalmente */
+    z-index: 2; /* Garante que o conteúdo fique acima da imagem */
+    padding: 30px; /* Ajuste o padding para dar um pequeno espaçamento do topo */
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-top: 0px; /* Ajuste para dar um espaçamento caso necessário */
+    color: rgba(0, 0, 0, 0.5); /* Cor para o título */
+}
+
+.banner p {
+    font-size: 23px;
+    margin-bottom: 30px;
+    color: coral;
+    font-weight: 550;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.cta-btn {
+    padding: 12px 24px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #e5533e;
+}
+
+/* Seção de recursos */
+.resources {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.resources h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.resource-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.resource-cards .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.resource-cards .card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.resource-cards .card p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Seção de Contato */
+.contact {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact .cta-btn {
+    padding: 12px 24px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.contact .cta-btn:hover {
+    background-color: #e5533e;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer_section {
+    margin-right: 50px;
+}
+
+.footer_section h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer_section p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #bbb;
+}
+
+.footer_section p svg {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer_bottom {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+
+    .resource-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-cards .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
+
+
+

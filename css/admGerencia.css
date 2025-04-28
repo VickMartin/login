@@ -1,0 +1,457 @@
+/* Corpo da página */
+body {
+    font-family: sans-serif;
+    background-color:#fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111111;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Ajustado para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Título da barra de navegação */
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* Texto do span na navbar */
+.navbar span {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+/* Botão de logout */
+.logout-button {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento */
+    border: none; /* Remove bordas */
+    background-color: rgb(241, 83, 10); /* Cor de fundo laranja */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de "mão" */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Negrito */
+    width: 50px;
+    text-align: center;
+}
+
+/* Hover do botão de logout */
+.logout-button:hover {
+    background-color: rgb(245, 4, 4);
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 21px;
+    color: #c26d1d;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    position: fixed; /* Mudança para 'fixed' para que se mova com o scroll */
+    top: 83px; /* Ajustado para começar logo após a navbar */
+    width: 220px;
+    height: calc(100% - 83px); /* Ajusta a altura da sidebar para a tela inteira menos o tamanho da navbar */
+    background-color: #534f4f;
+    color: white;
+    padding: 20px;
+    margin-left: -8px;
+    z-index: 999; /* Garante que a sidebar fique abaixo da navbar */
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: #0a356e;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover dos botões da sidebar */
+.sidebar-btn:hover {
+    background-color: #007bff;
+}
+
+
+
+
+
+
+/* Tables */
+.table {
+    width: 95%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 2%;
+    margin-top: 5%;
+    border-radius: 10px; /* Borda arredondada na tabela */
+    overflow: hidden; /* Garante que as bordas arredondadas apareçam corretamente */
+  
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+   
+    
+}
+
+.table th {
+    background-color: coral;
+    color: white;
+    
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #127bd1;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #ff5722;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.titulo{
+    margin-left: 1%;
+}
+.tabelas{
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 77%;
+    margin: auto;
+    margin-top: 8%;
+    margin-left: 18%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ____________________________formularios de alteração_________________________ */
+
+
+
+.container-Alterar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#4682B4;
+    font-family: Arial, sans-serif;
+    height: 600px;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+
+.alterar {
+    
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    height: 550px;
+    border: 2px solid #444;
+   
+}
+
+.alterar legend {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+    border: none;
+    background-color: #424140;
+    padding: 8px;
+    border-radius: 8px;
+    
+}
+
+.alterar label {
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.alterar input[type="text"],
+.alterar input[type="email"],
+.alterar input[type="text"],
+.alterar input[type="password"] {
+    width: 92%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color:aliceblue; /* Bege */
+    color: #333;
+    font-size: 16px;
+}
+
+#submit-input {
+    width: 60%;
+    padding: 12px;
+    background-color: rgb(240, 80, 22);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    margin-top: 5%;
+    
+}
+
+#submit-input:hover {
+    transform: scale(1.1); /* Efeito de zoom na imagem */  
+}
+.alterar .perfil-container {
+   
+display:inline;
+
+    
+}
+.alterar .perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre os grupos de rádio */
+}
+
+.alterar .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o botão de rádio e o texto */
+}
+
+.alterar label {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    
+
+    
+}
+.form-group a{
+    color: #fff;
+}
+
+.form-group p, .form-group input {
+    font-size: 1.1em;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.form-group input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+a {
+    color:black;
+    font-size: 17px;
+    
+}
+
+/* Altera a cor do link quando passar o mouse (hover) */
+a:hover {
+    transform: scale(1.1); /* Efeito de zoom na imagem */  
+    color:rgb(46, 44, 44);
+}
+
+/* _____________________Formulário de alteração do aluno_______________________ */
+
+
+
+
+.container-aluno {
+   
+    /* background-color:#e71616; */
+    margin-top: 6%;
+    padding: 8px;
+ 
+   
+}
+.container-Alterar-aluno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#4682B4;
+    font-family: Arial, sans-serif;
+    height: 675px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    top: 15%;
+    padding: 20px;
+}
+.container-Alterar-aluno fieldset{
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+}
+.container-Alterar-aluno legend{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid  #444;
+    background-color: #444;
+    padding: 8px;
+    border-radius: 8px;
+}
+.container-Alterar-aluno  label{
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container-Alterar-aluno input[type="text"],
+.container-Alterar-aluno input[type="date"],
+.container-Alterar-aluno input[type="select"]{
+    width: 92%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color:aliceblue; /* Bege */
+    color: #333;
+    font-size: 16px;
+}
+/* Ajuste para o campo de seleção */
+.container-Alterar-aluno select {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 15px;
+    background-color:aliceblue; /* Bege */
+    color: #333;
+    font-size: 16px;
+}
+
+
+
+
+.admin-card {
+    background-color: #f2f2f2; /* Cor de fundo suave */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.admin-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #FFD700; /* Borda dourada */
+}
+
+.admin-card-body {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.admin-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Mais sombra */
+}
+
+.admin-card-header::after {
+    content: '🌟'; /* Ícone de estrela ou coroa para "Admin" */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gold;
+    animation: shine 1.5s infinite alternate; /* Efeito de animação */
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

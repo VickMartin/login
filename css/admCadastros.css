@@ -1,0 +1,248 @@
+/* Corpo da página */
+body {
+    font-family: sans-serif;
+    background-color:#fff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111111;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Ajustado para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Título da barra de navegação */
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* Texto do span na navbar */
+.navbar span {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+/* Botão de logout */
+.logout-button {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento */
+    border: none; /* Remove bordas */
+    background-color: rgb(241, 83, 10); /* Cor de fundo laranja */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de "mão" */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Negrito */
+    width: 50px;
+    text-align: center;
+}
+
+/* Hover do botão de logout */
+.logout-button:hover {
+    background-color: rgb(245, 4, 4);
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 21px;
+    color: #c26d1d;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    position: fixed; /* Mudança para 'fixed' para que se mova com o scroll */
+    top: 83px; /* Ajustado para começar logo após a navbar */
+    width: 220px;
+    height: calc(100% - 83px); /* Ajusta a altura da sidebar para a tela inteira menos o tamanho da navbar */
+    background-color: #534f4f;
+    color: white;
+    padding: 20px;
+    margin-left: -8px;
+    z-index: 999; /* Garante que a sidebar fique abaixo da navbar */
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: #0a356e;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover dos botões da sidebar */
+.sidebar-btn:hover {
+    background-color: #007bff;
+}
+
+
+
+/* ________________Formulário de cadastro do Prof/RES__________________-- */
+
+/* Estilo geral do conteúdo do formulário */
+.form-content {
+    max-width: 400px; /* Define uma largura máxima fixa para o formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente na tela */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color:#4682B4; /* Define cor de  fundo  */
+    border-radius: 15px; /* Arredonda os cantos da borda */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.6); /* Adiciona uma leve sombra para destaque */
+    color:rgb(8, 8, 8);
+    max-height: 650px;
+    margin-top: 6%;
+
+   
+}
+.form-content fieldset{
+    border-radius: 5px;
+}
+/* Estilo do título do formulário */
+.form-content h2 {
+    font-size: 1.5em; /* Define o tamanho da fonte do título */
+    color:#0a0a0a; /* Define a cor preta do título */
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 25px; /* Espaçamento inferior para separar do conteúdo */
+    margin-top: 5%;
+}
+
+/* Estilo das labels */
+label {
+    display: block; /* Coloca a label em uma linha separada */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: rgb(15, 15, 15); /* Define a cor preta para as labels */
+    margin-bottom: 5px; /* Adiciona um pequeno espaçamento abaixo da label */
+}
+
+/* Estilo dos campos de entrada de texto, email e senha */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 93%; /* Faz o campo ocupar toda a largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno para melhor usabilidade */
+    margin-top: 5px; /* Espaçamento acima do campo */
+    margin-bottom: 15px; /* Espaçamento abaixo do campo */
+    border: 1px solid #ddd; /* Define uma borda clara ao redor dos campos */
+    border-radius: 25px; /* Arredonda os cantos dos campos */
+    font-family: Arial, sans-serif; /* Define a fonte dos campos */
+    font-size: 1em; /* Define o tamanho do texto */
+    background-color: #fff; /* Fundo branco para contraste com o fundo bege */
+}
+
+/* Estilo do botão de envio do formulário */
+/* Estilo do botão de envio do formulário */
+input[type="submit"] {
+    display: block; /* Faz o botão ser um bloco para poder aplicar margens */
+    width: 40%; /* Define a largura do botão */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    padding: 10px; /* Adiciona espaçamento interno para um botão maior */
+    background-color:rgb(240, 80, 22); /* Fundo laranja do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 50px; /* Arredonda os cantos do botão */
+    color: #fff; /* Define o texto do botão na cor branca */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    font-size: 1.1em; /* Aumenta um pouco o tamanho do texto */
+    cursor: pointer; /* Exibe o cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Aplica uma transição suave no hover */
+}
+
+/* Estilo de hover para o botão de envio */
+input[type="submit"]:hover {
+    transform: scale(1.1); /* Aplica o zoom (escala) de 10% */
+}
+.form-content h4{
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.admin-card {
+    background-color: #f2f2f2; /* Cor de fundo suave */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.admin-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #FFD700; /* Borda dourada */
+}
+
+.admin-card-body {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.admin-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Mais sombra */
+}
+
+.admin-card-header::after {
+    content: '🌟'; /* Ícone de estrela ou coroa para "Admin" */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gold;
+    animation: shine 1.5s infinite alternate; /* Efeito de animação */
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

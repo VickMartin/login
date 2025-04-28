@@ -1,0 +1,234 @@
+/* Corpo da página */
+body {
+    font-family: sans-serif;
+    background-color:#fff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #080808;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Ajustado para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Título da barra de navegação */
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* Texto do span na navbar */
+.navbar span {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+/* Botão de logout */
+.logout-button {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento */
+    border: none; /* Remove bordas */
+    background-color: rgb(241, 83, 10); /* Cor de fundo laranja */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de "mão" */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Negrito */
+    width: 50px;
+    text-align: center;
+}
+
+/* Hover do botão de logout */
+.logout-button:hover {
+    background-color: rgb(245, 4, 4);
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 21px;
+    color: #c26d1d;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    position: fixed; /* Mudança para 'fixed' para que se mova com o scroll */
+    top: 83px; /* Ajustado para começar logo após a navbar */
+    width: 220px;
+    height: calc(100% - 83px); /* Ajusta a altura da sidebar para a tela inteira menos o tamanho da navbar */
+    background-color: #534f4f;
+    color: white;
+    padding: 20px;
+    margin-left: -8px;
+    z-index: 999; /* Garante que a sidebar fique abaixo da navbar */
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: #0a356e;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover dos botões da sidebar */
+.sidebar-btn:hover {
+    background-color: #007bff;
+}
+
+
+
+/*_____________________FORMATAÇÃO DO FORMULÁRIO DO PERFIL DO ADMINISTRADOR________________*/
+
+
+/* Conteúdo principal (formulário) */
+.container-PerfilAdm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#4682B4;
+    font-family: Arial, sans-serif;
+    height: 560px;
+    max-width: 400px;
+    margin-left: 40%;
+    margin-top: 6%;
+    border-radius: 20px;
+}
+
+.profile-Adm {
+    width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+    height: 500px;
+    border: 2px solid #444;
+}
+
+.profile-Adm legend {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid  #444;
+    background-color: #444;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Estilos para a foto de perfil */
+.fotoAdm-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.foto-label {
+    display: block;
+    cursor: pointer;
+    border: 2px solid #80C4E9;
+    border-radius: 50%;
+    width: 145px;
+    height: 145px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.foto-label:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.foto-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Esconde o input de arquivo */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo para os inputs de texto */
+input[type="text"], input[type="email"] {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4f7fc;
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito de foco nos campos de input */
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #4335A7;
+    background-color: #fff;
+}
+
+/* Estilo do botão de envio */
+input[type="submit"] {
+    background-color: #FF7F3E;
+    color: white;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF9A6E;
+}
+
+/* Responsividade: ajusta o layout em telas pequenas */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .container-PerfilAdm {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .profile-Adm {
+        width: 100%;
+    }
+
+    .foto-label {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+

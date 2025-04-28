@@ -1,0 +1,516 @@
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #111111;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%; /* Corrigido para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 32px;
+}
+
+.navbar span {
+    color: cornflowerblue;
+    font-size: 32px;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: white;
+    padding: 14px 23px;
+    background-color: rgb(247, 30, 30);
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+.logout-button:hover {
+    padding: 15px 25px;
+    font-size: 20px;
+}
+
+/* Conteúdo principal */
+.content {
+    margin-top: 80px; /* Ajusta a margem superior para não ficar sobre a navbar fixa */
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    
+}
+
+/* Estilo para o conteúdo das turmas */
+.content-turmasP {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Saudação do professor */
+.saudacao {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para as turmas */
+.turmas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Ajusta o espaçamento entre os botões */
+}
+
+.turma-button {
+    
+   
+    background-color: #e64a19;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display:block;
+}
+
+.turma-button:hover {
+     background-color: #fd5d4e;
+    transform: translateY(-5px);
+}
+
+/* Estilo para a mensagem caso não haja turmas */
+.no-turma-msg {
+    text-align: center;
+    font-size: 18px;
+    color: #f44336;
+    margin-top: 30px;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-turmasP {
+        padding: 20px;
+    }
+
+    .turmas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .turma-button {
+        width: 80%;
+    }
+}
+
+
+/* __________________________ Listas de alunos dentro das turmas_____________________ */
+/* Estilo para a lista de alunos */
+.alunos-container {
+    margin-top: 30px;
+}
+
+.alunos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os botões dos alunos */
+}
+
+.aluno-item {
+    margin-bottom: 20px; /* Espaçamento entre as linhas de alunos */
+}
+
+.aluno-link {
+    text-decoration: none;
+}
+
+/* Estilo do botão de aluno */
+.btn-aluno {
+    background-color: #e64a19;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    margin-left: 30%;
+}
+
+.btn-aluno:hover {
+    background-color: #fd5d4e;
+    transform: translateY(-5px); /* Efeito de levantar o botão ao passar o mouse */
+}
+
+/* Mensagem caso não haja alunos */
+.no-students-msg {
+    text-align: center;
+    font-size: 18px;
+    color: #f44336;
+    margin-top: 30px;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .alunos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-aluno {
+        width: 80%; /* Ajuste a largura do botão para 80% da tela */
+        padding: 12px 20px; /* Ajuste o padding para garantir boa aparência */
+        font-size: 16px; /* Ajuste o tamanho da fonte */
+    }
+}
+
+
+/* ___________________________-Perfil de cada aluno visualizado pelo professor______________________ */
+
+
+
+/* Conteúdo principal */
+.content-aluno {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    width: 95%;
+   
+    
+}
+
+/*___________________estilo para o menu do professor como os links que varia de pagina em pagina_________________________________*/
+.menu_professor {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    flex-wrap: wrap; /* Garante que os itens se ajustem conforme o tamanho da tela */
+    gap: 15px; /* Espaço entre os links */
+}
+
+.menu_professor a {
+    padding: 12px 22px;
+    color: white; /* Cor do texto */
+    background-color: coral; /* Fundo branco */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    font-size: 19px;
+}
+
+.menu_professor a:hover {
+    color: #fff;
+    background-color: #d66a33; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* _________________________Onde é exibindo as informações da aluno pra o professor___________________________ */
+
+
+ /* Perfil do Aluno */
+ .perfil-alunos {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #3498db;
+    padding: 20px;
+    border-radius: 10px;
+    width: 95%;
+}
+
+legend {
+    font-size: 24px;
+    color: #3498db;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Informações e Foto do Aluno */
+.informacoes-e-foto {
+    display: flex;
+    gap: 30px;
+}
+
+.informacoes-aluno {
+    flex: 1;
+}
+
+.foto-aluno {
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    margin-right: 8%;
+}
+
+.foto-aluno img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Estilo das informações */
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.info-item span {
+    font-size: 20px;
+    color: #555;
+}
+
+h4 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* __________________________Comunicados que o professor visualiza_________________________- */
+
+/* Container principal */
+.perfil-container {
+    top: 15%;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    
+}
+
+/* Título */
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Formulário */
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels e campos de entrada */
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+select, textarea, button {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    max-width: 100%;
+}
+
+/* Botão de envio */
+.submit-btn {
+    background-color:#e64a19;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    width: 40%;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
+    transition: transform 0.3s ease-in-out; /* Transição suave */ 
+}
+
+/* Opções de contato */
+.contact-options {
+    margin-top: 30px;
+    display: flex;
+    margin-left: 30%;
+    font-size: 20px;
+}
+
+.perfil-container p{
+    font-size: 18px;
+    color: #222;
+    font-weight: bold; /* Aplica o negrito aos rótulos */
+}
+
+
+.contact-btn {
+    
+    color: #fff;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+.img-containe{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.email img{
+    width: 55px;
+    height: 47px;
+    gap: 5px;
+}
+
+.wats img{
+    width: 50px;
+    height: 45x;
+    gap: 5px;
+    
+}
+
+
+
+/* Espaçamento adicional */
+br {
+    margin-bottom: 10px;
+}
+
+/* __________________envio de relátorios_____________________________ */
+
+/* Formulário de Upload */
+.perfil-comunicados{
+    width:100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos de entrada */
+.upload-fields {
+    margin-bottom: 20px;
+}
+
+.upload-fields label {
+    font-size: 16px;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.upload-fields select, 
+.upload-fields input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+.input-relatorio{
+    background-color: coral;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

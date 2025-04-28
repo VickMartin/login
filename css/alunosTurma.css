@@ -1,0 +1,297 @@
+/* Corpo da página */
+body {
+    font-family: sans-serif;
+    background-color:#fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #080808;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Ajustado para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Título da barra de navegação */
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* Texto do span na navbar */
+.navbar span {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+/* Botão de logout */
+.logout-button {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento */
+    border: none; /* Remove bordas */
+    background-color: rgb(241, 83, 10); /* Cor de fundo laranja */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de "mão" */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Negrito */
+    width: 50px;
+    text-align: center;
+}
+
+/* Hover do botão de logout */
+.logout-button:hover {
+    background-color: rgb(245, 4, 4);
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 21px;
+    color: #c26d1d;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    position: fixed; /* Mudança para 'fixed' para que se mova com o scroll */
+    top: 83px; /* Ajustado para começar logo após a navbar */
+    width: 220px;
+    height: calc(100% - 83px); /* Ajusta a altura da sidebar para a tela inteira menos o tamanho da navbar */
+    background-color: #534f4f;
+    color: white;
+    padding: 20px;
+    margin-left: -8px;
+    z-index: 999; /* Garante que a sidebar fique abaixo da navbar */
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: #0a356e;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover dos botões da sidebar */
+.sidebar-btn:hover {
+    background-color: #007bff;
+}
+
+
+/* Estilização do container principal */
+.contener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;  /* Ajusta o espaço abaixo da navbar */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.contener fieldset{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid darkgrey ;
+    border-radius: 3px;
+}
+/* Estilização do formulário de pesquisa */
+.contener h2 {
+   margin-right: 50%;
+}
+.contener form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contener form input[type="text"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 85%;
+    max-width: 400px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contener form button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20%;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contener form button:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+
+/* Resultados da Pesquisa */
+.resultados {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.resultados h3 {
+    
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 50%;
+}
+
+.resultados h4 {
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+.resultados form input[type="text"]{
+    width: 75%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(224, 85, 34);
+    color: #fff;
+    margin-left: 100%;
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 0px;
+}
+
+button:focus {
+    outline: none; /* Remove o contorno ao clicar */
+}
+
+/* Botão Inserir */
+button[type="submit"][name="inserir"] {
+    background-color: #3498db; /* Laranja */
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-left: 100%;
+    width: 40%;
+    font-size: 18px;
+    margin-left: 5%;
+    border-radius: 5px;
+    
+
+}
+
+button[type="submit"][name="inserir"]:hover {
+
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Botão Cancelar */
+button[type="submit"][name="cancelar"] {
+    background-color:crimson; /* Cinza claro */
+    color: white;
+    width: 40%;
+    font-size: 18px;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
+button[type="submit"][name="cancelar"]:hover {
+    
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+
+.admin-card {
+    background-color: #f2f2f2; /* Cor de fundo suave */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.admin-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #FFD700; /* Borda dourada */
+}
+
+.admin-card-body {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.admin-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Mais sombra */
+}
+
+.admin-card-header::after {
+    content: '🌟'; /* Ícone de estrela ou coroa para "Admin" */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gold;
+    animation: shine 1.5s infinite alternate; /* Efeito de animação */
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

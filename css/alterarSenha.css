@@ -1,0 +1,194 @@
+/* Definindo o estilo básico da página */
+
+/* esse é do primeiro formulário o que só faz a busca do email */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do container principal do formulário */
+.formulario {
+    background-color:  rgb(180, 212, 231);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+.formulario fieldset{
+    padding: 30px;
+    border: 2px solid #555;
+}
+/* Estilo do título do formulário */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+/* Estilo do label */
+#email{
+    
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilo do campo de entrada de e-mail */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo do botão de envio */
+.inputSubmit {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.inputSubmit:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para quando o campo de entrada tem erro */
+input[type="text"]:invalid {
+    border-color: red;
+}
+
+/* Estilo para mensagens de erro ou sucesso */
+.error-message, .success-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+}
+
+
+
+/* Resetando algumas propriedades padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container do formulário */
+.container {
+    background-color:  rgb(180, 212, 231);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.container fieldset{
+    padding: 30px;
+    border: 2px solid #555;
+}
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Parágrafo de saudação */
+p {
+    text-align: center;
+    margin-bottom: 10%;
+    color: #555;
+    
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para cada campo de input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="password"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: rgb(226, 81, 28);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    
+    padding: 13px;
+    font-size: 20px;
+}
+
+/* Mensagem de erro (para quando as senhas não coincidirem) */
+.alert {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}

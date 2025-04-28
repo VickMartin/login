@@ -1,0 +1,382 @@
+/* Corpo da página */
+body {
+    font-family: sans-serif;
+    background-color:#fff;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111111;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Ajustado para 100% da largura */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Título da barra de navegação */
+.navbar h3 {
+    color: coral;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* Texto do span na navbar */
+.navbar span {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+/* Botão de logout */
+.logout-button {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento */
+    border: none; /* Remove bordas */
+    background-color: rgb(241, 83, 10); /* Cor de fundo laranja */
+    border-radius: 40px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de "mão" */
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Negrito */
+    width: 50px;
+    text-align: center;
+}
+
+/* Hover do botão de logout */
+.logout-button:hover {
+    background-color: rgb(245, 4, 4);
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 21px;
+    color: #c26d1d;
+}
+
+/* Sidebar (menu lateral) */
+.sidebar {
+    position: fixed; /* Mudança para 'fixed' para que se mova com o scroll */
+    top: 83px; /* Ajustado para começar logo após a navbar */
+    width: 220px;
+    height: calc(100% - 83px); /* Ajusta a altura da sidebar para a tela inteira menos o tamanho da navbar */
+    background-color: #534f4f;
+    color: white;
+    padding: 20px;
+    margin-left: -8px;
+    z-index: 999; /* Garante que a sidebar fique abaixo da navbar */
+}
+
+/* Botões da sidebar */
+.sidebar-btn {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: #0a356e;
+    padding: 9px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover dos botões da sidebar */
+.sidebar-btn:hover {
+    background-color: #007bff;
+}
+
+/* __________________________Criação das turmas____________________________ */
+/* Contêiner principal */
+.turmas {
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 77%;
+    margin: auto;
+    margin-top: 5%;
+    margin-left: 18%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 5%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Título principal */
+.turmas h1 {
+    text-align: center;
+    color:#111111;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+.turmas h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Formulário para criar turma */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin: auto;
+    width: 40%;
+}
+
+form label {
+    display:block;
+    font-weight: bold;
+    margin-top: 10px;
+    
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #FF7F3E;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    font-size: 23px;
+   
+}
+
+form input[type="submit"]:hover {
+   
+    background-color: #e5601d;
+   
+
+}
+
+/* Tabela das turmas */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Evita bordas arredondadas que saem da tabela */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #FF7F3E;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table a {
+    color: #127bd1;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de tabela */
+table td[colspan="5"] {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+/* Buttons */
+
+
+.btn-adiciona {
+    background-color: #127bd1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    
+}
+.btn-excluir {
+    background-color: #df3428;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* ______________________Vizualização das turmas_____________________ */
+/* Remover o sublinhado do link */
+a {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Botões de Turmas */
+.btn_turmas {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Limita a largura máxima do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; /* Centraliza o botão e adiciona espaçamento entre os botões */
+    display: block; /* Garante que cada botão ocupe uma linha */
+    text-decoration: none; /* Garante que não tenha decoração de texto no botão */
+}
+
+.btn_turmas:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.btn_turmas:active {
+    background-color: #004085; /* Cor para quando o botão é pressionado */
+}
+
+/* Mensagem caso não haja turmas */
+p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .btn_turmas {
+        width: 90%; /* Botões mais largos em telas menores */
+        max-width: none; /* Remove o limite de largura */
+    }
+
+    h2 {
+        font-size: 20px; /* Menor tamanho de fonte em telas pequenas */
+    }
+}
+
+/* Ajustes para o contêiner de turmas */
+.turmas {
+    display: flex;
+    flex-direction: column; /* Organiza os botões na vertical */
+    gap: 15px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza os botões no eixo horizontal */
+    padding: 20px;
+}
+.alunos-list{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+.admin-card {
+    background-color: #f2f2f2; /* Cor de fundo suave */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.admin-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #FFD700; /* Borda dourada */
+}
+
+.admin-card-body {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.admin-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Mais sombra */
+}
+
+.admin-card-header::after {
+    content: '🌟'; /* Ícone de estrela ou coroa para "Admin" */
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gold;
+    animation: shine 1.5s infinite alternate; /* Efeito de animação */
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
